@@ -57,5 +57,43 @@ fn main() {
     let element = a[index];
 
     println!("The value of the element at index {index} is: {element}");
+    
+    another_func(a[index]);
+    
+    let sum=add(2,3);
 
+    println!("Sum is {sum}") ;
+
+    if sum>10{
+        println!("Sum is greater than 10");
+    }else{
+        println!("Sum is less than 10");
+    }
+
+    let check=if sum>10 {5} else {20};
+
+    println!("Check:{check}");
+
+    let mut count=0;
+
+    let res = 'countingup: loop{
+        count=count+1;
+
+        if count == 10{
+            break 'countingup count;
+        }
+    };
+    println!("{res}");
+
+    for num in (1..4).rev(){
+        println!("{}",num);
+    }
+}
+
+fn another_func(x: i32){
+    println!("Hello {x}");
+}
+
+fn add(x: i32,y: i32) -> i32{
+    return x+y;
 }
